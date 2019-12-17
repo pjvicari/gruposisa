@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DAADCFDF-B1B5-406E-A343-6F04909CB533}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ControlPagos</RootNamespace>
+    <AssemblyName>GrupoSisa</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.DataAccess, Version=2.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Formularios\Busquedas\frmClienteBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Busquedas\frmClienteBusqueda.Designer.cs">
+      <DependentUpon>frmClienteBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmContactoAsociacionesInformacionDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmContactoAsociacionesInformacionDetalle.Designer.cs">
+      <DependentUpon>frmContactoAsociacionesInformacionDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmContactoAsociacionInformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmContactoAsociacionInformacion.Designer.cs">
+      <DependentUpon>frmContactoAsociacionInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmContactoListado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmContactoListado.Designer.cs">
+      <DependentUpon>frmContactoListado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmCorporacionEmpresaInformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmCorporacionEmpresaInformacion.Designer.cs">
+      <DependentUpon>frmCorporacionEmpresaInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmCorporacionListado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmCorporacionListado.Designer.cs">
+      <DependentUpon>frmCorporacionListado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmCorporacionEmpresaInformacionDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmCorporacionEmpresaInformacionDetalle.Designer.cs">
+      <DependentUpon>frmCorporacionEmpresaInformacionDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmEmpresaListado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmEmpresaListado.Designer.cs">
+      <DependentUpon>frmEmpresaListado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmEmpresaSucursalContactoInformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmEmpresaSucursalContactoInformacion.Designer.cs">
+      <DependentUpon>frmEmpresaSucursalContactoInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmEmpresaSucursalContactosInformacionDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmEmpresaSucursalContactosInformacionDetalle.Designer.cs">
+      <DependentUpon>frmEmpresaSucursalContactosInformacionDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmEmpresaSucursalesInformacionDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmEmpresaSucursalesInformacionDetalle.Designer.cs">
+      <DependentUpon>frmEmpresaSucursalesInformacionDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmTratamientoInformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmTratamientoInformacion.Designer.cs">
+      <DependentUpon>frmTratamientoInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmTratamientoListado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Clientes\frmTratamientoListado.Designer.cs">
+      <DependentUpon>frmTratamientoListado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Lugares\frmDepartamentoInformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Lugares\frmDepartamentoInformacion.Designer.cs">
+      <DependentUpon>frmDepartamentoInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Lugares\frmDepartamentoListado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Lugares\frmDepartamentoListado.Designer.cs">
+      <DependentUpon>frmDepartamentoListado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Lugares\frmMunicipioInformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Lugares\frmMunicipioInformacion.Designer.cs">
+      <DependentUpon>frmMunicipioInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Lugares\frmMunicipioListado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Lugares\frmMunicipioListado.Designer.cs">
+      <DependentUpon>frmMunicipioListado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Lugares\frmPaisInformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Lugares\frmPaisInformacion.Designer.cs">
+      <DependentUpon>frmPaisInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Lugares\frmPaisListado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Lugares\frmPaisListado.Designer.cs">
+      <DependentUpon>frmPaisListado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Funciones.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Busquedas\frmClienteBusqueda.resx">
+      <DependentUpon>frmClienteBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Clientes\frmContactoAsociacionesInformacionDetalle.resx">
+      <DependentUpon>frmContactoAsociacionesInformacionDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Clientes\frmContactoAsociacionInformacion.resx">
+      <DependentUpon>frmContactoAsociacionInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Clientes\frmContactoListado.resx">
+      <DependentUpon>frmContactoListado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Clientes\frmCorporacionEmpresaInformacion.resx">
+      <DependentUpon>frmCorporacionEmpresaInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Clientes\frmCorporacionListado.resx">
+      <DependentUpon>frmCorporacionListado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Clientes\frmCorporacionEmpresaInformacionDetalle.resx">
+      <DependentUpon>frmCorporacionEmpresaInformacionDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Clientes\frmEmpresaListado.resx">
+      <DependentUpon>frmEmpresaListado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Clientes\frmEmpresaSucursalContactoInformacion.resx">
+      <DependentUpon>frmEmpresaSucursalContactoInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Clientes\frmEmpresaSucursalContactosInformacionDetalle.resx">
+      <DependentUpon>frmEmpresaSucursalContactosInformacionDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Clientes\frmEmpresaSucursalesInformacionDetalle.resx">
+      <DependentUpon>frmEmpresaSucursalesInformacionDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Clientes\frmTratamientoInformacion.resx">
+      <DependentUpon>frmTratamientoInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Clientes\frmTratamientoListado.resx">
+      <DependentUpon>frmTratamientoListado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Lugares\frmDepartamentoInformacion.resx">
+      <DependentUpon>frmDepartamentoInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Lugares\frmDepartamentoListado.resx">
+      <DependentUpon>frmDepartamentoListado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Lugares\frmMunicipioInformacion.resx">
+      <DependentUpon>frmMunicipioInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Lugares\frmMunicipioListado.resx">
+      <DependentUpon>frmMunicipioListado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Lugares\frmPaisInformacion.resx">
+      <DependentUpon>frmPaisInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Lugares\frmPaisListado.resx">
+      <DependentUpon>frmPaisListado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Formularios\Archivo\" />
+    <Folder Include="Formularios\Procesos\" />
+    <Folder Include="Formularios\Reportes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Conexion\Conexion.vbproj">
+      <Project>{22026ea6-7a72-4efd-b17a-e8418a77a26c}</Project>
+      <Name>Conexion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{66c66c7a-0e21-44bd-988d-8ec7bb793cf3}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\066_icono.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aceptar_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aplicar_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archivo_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ayuda_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar_documentos_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\catalogos_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confronta_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultar_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desaplicar_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estrella_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\felchas_abajo_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filtro_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechas_arriba_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grafica_pie_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graficas_linea.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimir_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\informes_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\llave_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modificar_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\procesos_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reporte_2_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subir_archivos_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uo_administracion.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uo_centros.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uo_delegaciones.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uo_division_regional.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uo_otras.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uo_seleccion.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uo_servicios_empresariales.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\validaciones_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\word_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ayuda.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ayuda_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bitacora_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendario_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cierres_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edificio_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\informes_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\llave_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagina_web.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tickets.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\016.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\017.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\040.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\089.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

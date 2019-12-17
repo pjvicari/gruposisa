@@ -1,0 +1,62 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Intecap.Conexion.1.6
+</name>
+</assembly>
+<members>
+<member name="M:Intecap.Conexion.Base.CargarDatos(System.String@,System.String,System.String)">
+	<summary>
+	</summary>
+	<param name="contenedor"></param>
+	<param name="selectSQL"></param>
+	<param name="fromSQL"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Intecap.Conexion.Base.CargarDatos(System.String@,System.String,System.String,System.String)">
+	<summary>
+	</summary>
+	<param name="contenedor"></param>
+	<param name="selectSQL"></param>
+	<param name="fromSQL"></param>
+	<param name="groupBySQL"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Intecap.Conexion.Base.CargarDatos(System.String@,System.String,System.String,System.String,System.String)">
+	<summary>
+	</summary>
+	<param name="contenedor"></param>
+	<param name="selectSQL"></param>
+	<param name="fromSQL"></param>
+	<param name="groupBySQL"></param>
+	<param name="havingSQL"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Intecap.Conexion.Base.CargarDatos(System.String@,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+	</summary>
+	<param name="contenedor"></param>
+	<param name="selectSQL"></param>
+	<param name="fromSQL"></param>
+	<param name="groupBySQL"></param>
+	<param name="havingSQL"></param>
+	<param name="orderBySQL"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Intecap.Conexion.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Intecap.Conexion.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Intecap.Conexion.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

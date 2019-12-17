@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{22026EA6-7A72-4EFD-B17A-E8418A77A26C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Conexion</RootNamespace>
+    <AssemblyName>Conexion</AssemblyName>
+    <MyType>Windows</MyType>
+    <SignAssembly>false</SignAssembly>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/InteConn/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Conexion.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42032,42036</NoWarn>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <WarningLevel>1</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Conexion.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42032,42036</NoWarn>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <WarningLevel>1</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>\\dinf-aiis-svr\upg$\Admón Operativa\Año 2007\Dll's\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Web, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\172.16.7.11\upg$\Admón Operativa\Año 2007\Dll's\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="CrystalDecisions.Shared" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="Oracle.DataAccess" />
+    <Import Include="Oracle.DataAccess.Client" />
+    <Import Include="Oracle.DataAccess.Types" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Data.SqlClient" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Drawing.Printing" />
+    <Import Include="System.Globalization" />
+    <Import Include="System.IO" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\Conexion\Base.vb" />
+    <Compile Include="Clases\Conexion\Columna.vb" />
+    <Compile Include="Clases\Conexion\ConsultaSQL.vb" />
+    <Compile Include="Clases\Conexion\Datos.vb" />
+    <Compile Include="Clases\Exportar\Exportar.vb" />
+    <Compile Include="Clases\Graficas\GraficaMultiSerie.vb" />
+    <Compile Include="Clases\Graficas\GraficaMonoSerie.vb" />
+    <Compile Include="Clases\Reporte.vb" />
+    <Compile Include="Clases\ReporteConexion.vb" />
+    <Compile Include="Clases\Conexion\Parametro.vb" />
+    <Compile Include="Clases\ReporteFuente.vb" />
+    <Compile Include="Clases\UnidadOperativa.vb" />
+    <Compile Include="Clases\Conexion\Data_Base.vb" />
+    <Compile Include="Interfaces\ItmpForma.vb" />
+    <Compile Include="Clases\Funciones\ModuloGeneral.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaFiltrarParametros.Designer.vb">
+      <DependentUpon>frmPlantillaFiltrarParametros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaFiltrarParametros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaInformacionDetalle.Designer.vb">
+      <DependentUpon>frmPlantillaInformacionDetalle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaInformacionDetalle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaListadoNew.Designer.vb">
+      <DependentUpon>frmPlantillaListadoNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaListadoNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaListadoInformacion.Designer.vb">
+      <DependentUpon>frmPlantillaListadoInformacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaListadoInformacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaMenuPrincipal.Designer.vb">
+      <DependentUpon>frmPlantillaMenuPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaMenuPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaInformacion.Designer.vb">
+      <DependentUpon>frmPlantillaInformacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaInformacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaListadoVacio.Designer.vb">
+      <DependentUpon>frmPlantillaListadoVacio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaListadoVacio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaInformeParametros.Designer.vb">
+      <DependentUpon>frmPlantillaInformeParametros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaInformeParametros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaProcesos.Designer.vb">
+      <DependentUpon>frmPlantillaProcesos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaProcesos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaSelectorDeUnidad.Designer.vb">
+      <DependentUpon>frmPlantillaSelectorDeUnidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaSelectorDeUnidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaSelectorDeAño.Designer.vb">
+      <DependentUpon>frmPlantillaSelectorDeAño.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaSelectorDeAño.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IWindowsFormABC.vb" />
+    <Compile Include="Plantillas\frmPlantillaFiltrar.Designer.vb">
+      <DependentUpon>frmPlantillaFiltrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaFiltrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaListado.Designer.vb">
+      <DependentUpon>frmPlantillaListado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaListado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaInforme.Designer.vb">
+      <DependentUpon>frmPlantillaInforme.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plantillas\frmPlantillaInforme.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantillas\frmPlantillaFiltrarParametros.resx">
+      <DependentUpon>frmPlantillaFiltrarParametros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantillas\frmPlantillaInformacionDetalle.resx">
+      <DependentUpon>frmPlantillaInformacionDetalle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantillas\frmPlantillaListadoNew.resx">
+      <DependentUpon>frmPlantillaListadoNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantillas\frmPlantillaListadoInformacion.resx">
+      <DependentUpon>frmPlantillaListadoInformacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantillas\frmPlantillaMenuPrincipal.resx">
+      <DependentUpon>frmPlantillaMenuPrincipal.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantillas\frmPlantillaInformacion.resx">
+      <DependentUpon>frmPlantillaInformacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantillas\frmPlantillaListadoVacio.resx">
+      <DependentUpon>frmPlantillaListadoVacio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantillas\frmPlantillaInformeParametros.resx">
+      <DependentUpon>frmPlantillaInformeParametros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantillas\frmPlantillaProcesos.resx">
+      <DependentUpon>frmPlantillaProcesos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantillas\frmPlantillaSelectorDeUnidad.resx">
+      <DependentUpon>frmPlantillaSelectorDeUnidad.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantillas\frmPlantillaSelectorDeAño.resx">
+      <DependentUpon>frmPlantillaSelectorDeAño.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantillas\frmPlantillaFiltrar.resx">
+      <DependentUpon>frmPlantillaFiltrar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantillas\frmPlantillaListado.resx">
+      <DependentUpon>frmPlantillaListado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plantillas\frmPlantillaInforme.resx">
+      <DependentUpon>frmPlantillaInforme.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Diagramas\Conexion.cd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controles\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

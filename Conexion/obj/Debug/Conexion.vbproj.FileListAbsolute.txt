@@ -52,7 +52,6 @@ C:\Users\pjvic\source\repos\GrupoSisa\Conexion\bin\Debug\ShockwaveFlashObjects.d
 C:\Users\pjvic\source\repos\GrupoSisa\Conexion\bin\Debug\Google.Protobuf.xml
 C:\Users\pjvic\source\repos\GrupoSisa\Conexion\bin\Debug\MySql.Data.xml
 C:\Users\pjvic\source\repos\GrupoSisa\Conexion\bin\Debug\Renci.SshNet.xml
-C:\Users\pjvic\source\repos\GrupoSisa\Conexion\obj\Debug\Conexion.vbprojAssemblyReference.cache
 C:\Users\pjvic\source\repos\GrupoSisa\Conexion\obj\Debug\Conexion.Resources.resources
 C:\Users\pjvic\source\repos\GrupoSisa\Conexion\obj\Debug\Conexion.frmPlantillaFiltrarParametros.resources
 C:\Users\pjvic\source\repos\GrupoSisa\Conexion\obj\Debug\Conexion.frmPlantillaInformacionDetalle.resources

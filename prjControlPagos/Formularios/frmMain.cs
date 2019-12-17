@@ -77,5 +77,12 @@ namespace ControlPagos
             _Contacto.MdiParent = this;
             _Contacto.Show();
         }
+
+        private void mnuEmpresas_Click(object sender, EventArgs e)
+        {
+            Formularios.Catalogos.frmEmpresaListado _Empresa = new Formularios.Catalogos.frmEmpresaListado();
+            _Empresa.MdiParent = this;
+            _Empresa.Show();
+        }
     }
 }

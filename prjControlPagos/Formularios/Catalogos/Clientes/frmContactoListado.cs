@@ -32,7 +32,7 @@ namespace ControlPagos.Formularios.Catalogos
                 MostrarBotonImprimir = false;
                 MostrarRegistros = "500";
                 // Consultas        
-                SelectSQL = "CODIGO_CONTACTO, NIT_FACTURACION, NOMBRE_CONTACTO, NOMBRE_FACTURACION, CASE ESTADO_CLIENTE WHEN 0 THEN 'Inactivo' WHEN 1 THEN 'Activo' END AS ESTADO";
+                SelectSQL = "CODIGO_CONTACTO, NIT_FACTURACION, NOMBRE_CONTACTO, NOMBRE_FACTURACION, CASE ESTADO_CONTACTO WHEN 0 THEN 'Inactivo' WHEN 1 THEN 'Activo' END AS ESTADO";
                 From = "CRM_CONTACTOS";
                 Where = "";
                 OrderBy = "CODIGO_CONTACTO";

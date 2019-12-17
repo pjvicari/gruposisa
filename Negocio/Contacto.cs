@@ -36,7 +36,7 @@ namespace Negocio
         private string _NombreFacturacion = ""; public string NombreFacturacion { get => _NombreFacturacion; set => _NombreFacturacion = value; }
         private DateTime _FechaRegistro = DateTime.MinValue; public DateTime FechaRegistro { get => _FechaRegistro; set => _FechaRegistro = value; }
         private int _TipoCliente = 1; public int TipoCliente { get => _TipoCliente; set => _TipoCliente = value; }
-        private int _EstadoCliente = 1; public int EstadoCliente { get => _EstadoCliente; set => _EstadoCliente = value; }
+        private int _EstadoContacto = 1; public int EstadoContacto { get => _EstadoContacto; set => _EstadoContacto = value; }
         //Propiedades de relacion con empresa, sucursal o corporacion
         private int _CodigoCliContacto = 0; public int CodigoCliContacto { get => _CodigoCliContacto; set => _CodigoCliContacto = value; }
         private int _TipoClienteContacto = 0; public int TipoClienteContacto { get => _TipoClienteContacto; set => _TipoClienteContacto = value; }
@@ -76,7 +76,7 @@ namespace Negocio
                 if (_NombreFacturacion == "" || _NombreFacturacion.Length > 250) { Mensaje = "Debe ingresar un valor en Nombre Facturacion. No debe exceder los 250 carácteres."; _Resultado = false; goto salir; }
                 //if (_FechaRegistro == DateTime.MinValue) { Mensaje = "Debe ingresar un valor en Fecha Registro."; _Resultado = false; goto salir; }
                 if (_TipoCliente == 0) { Mensaje = "Debe ingresar un valor en Tipo Cliente."; _Resultado = false; goto salir; }
-                if (_EstadoCliente == 0) { Mensaje = "Debe ingresar un valor en Estado Cliente."; _Resultado = false; goto salir; }
+                if (_EstadoContacto == 0) { Mensaje = "Debe ingresar un valor en Estado Cliente."; _Resultado = false; goto salir; }
 
                 if (_TipoClienteContacto != 0)
                 {
@@ -127,12 +127,12 @@ namespace Negocio
                             _Data.AsignarCampo("CODIGO_DEPARTAMENTO_CONTACTO", _CodigoDepartamentoContacto);
                             _Data.AsignarCampo("CODIGO_MUNICIPIO_CONTACTO", _CodigoMunicipioContacto);
                             _Data.AsignarCampo("NOMBRE_FACTURACION", _NombreFacturacion);
-                            _Data.AsignarCampo("FECHA_REGISTRO", "now()");
+                            _Data.AsignarCampo("FECHA_REGISTRO", "now()", false, false, ModuloGeneral.TipoDeOperadorLogico.AndOperador, System.Data.ParameterDirection.Input, true);
                             _Data.AsignarCampo("TIPO_CLIENTE", _TipoCliente);
-                            _Data.AsignarCampo("ESTADO_CLIENTE", _EstadoCliente);
+                            _Data.AsignarCampo("ESTADO_CONTACTO", _EstadoContacto);
                             _Resultado = _Data.EjecutarOperacion(_TipoDeOperacion, "CRM_CONTACTOS");
 
-                            if (_TipoClienteContacto != 0)
+                            if (_TipoClienteContacto != 0 && _Resultado)
                             {
                                 OperarClienteContacto();
                             }
@@ -141,9 +141,9 @@ namespace Negocio
                     case ModuloGeneral.TipoDeOperacion.Eliminar:
                         if (_CodigoContacto == 0) { Mensaje = "Debe ingresar un valor en Codigo Contacto."; _Resultado = false; goto salir; }
                         _Data.AsignarCampo("CODIGO_CONTACTO", _CodigoContacto, true);
-                        _Data.AsignarCampo("FECHA_REGISTRO", "now()");
-                        _Data.AsignarCampo("ESTADO_CLIENTE", _EstadoCliente);
-                        _Resultado = _Data.EjecutarOperacion(_TipoDeOperacion, "CRM_CONTACTOS");
+                        _Data.AsignarCampo("FECHA_REGISTRO", "now()", false, false, ModuloGeneral.TipoDeOperadorLogico.AndOperador, System.Data.ParameterDirection.Input, true);
+                        _Data.AsignarCampo("ESTADO_CLIENTE", _EstadoContacto);
+                        _Resultado = _Data.EjecutarOperacion(ModuloGeneral.TipoDeOperacion.Modificar, "CRM_CONTACTOS");
                         break;
                 }
             }
@@ -196,7 +196,7 @@ namespace Negocio
                         if (ValidarClienteContacto())
                         {
                             _Data.AsignarCampo("CODIGO_CLI_CONTACTO", _CodigoCliContacto, true);
-                            _Data.AsignarCampo("TIPO_CLIENTE", _TipoCliente);
+                            _Data.AsignarCampo("TIPO_CLIENTE", _TipoClienteContacto);
                             _Data.AsignarCampo("CODIGO_CONTACTO", _CodigoContacto);
                             _Data.AsignarCampo("CODIGO_CLIENTE", _CodigoCliente);
                             _Resultado = _Data.EjecutarOperacion(_TipoDeOperacion, "CRM_CLIENTES_CONTACTO");
@@ -204,7 +204,9 @@ namespace Negocio
                         }
                         break;
                     case ModuloGeneral.TipoDeOperacion.Eliminar:
+                        if (_CodigoCliContacto == 0) { Mensaje = "Debe ingresar un valor en Codigo Cli Contacto."; _Resultado = false; goto salir; }
                         if (_CodigoContacto == 0) { Mensaje = "Debe ingresar un valor en Codigo Contacto."; _Resultado = false; goto salir; }
+                        _Data.AsignarCampo("CODIGO_CLI_CONTACTO", _CodigoCliContacto, true);
                         _Data.AsignarCampo("CODIGO_CONTACTO", _CodigoContacto, true);
                         _Resultado = _Data.EjecutarOperacion(_TipoDeOperacion, "CRM_CLIENTES_CONTACTO");
                         break;

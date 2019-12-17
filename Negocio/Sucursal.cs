@@ -27,6 +27,7 @@ namespace Negocio
         private int _CodigoEmpresa = 0; public int CodigoEmpresa { get => _CodigoEmpresa; set => _CodigoEmpresa = value; }
         private string _DireccionSucursal = ""; public string DireccionSucursal { get => _DireccionSucursal; set => _DireccionSucursal = value; }
         private string _TelefonosSucursal = ""; public string TelefonosSucursal { get => _TelefonosSucursal; set => _TelefonosSucursal = value; }
+        private string _EmailSucursal = ""; public string EmailSucursal { get => _EmailSucursal; set => _EmailSucursal = value; }
         private int _CodigoPaisSucursal = 0; public int CodigoPaisSucursal { get => _CodigoPaisSucursal; set => _CodigoPaisSucursal = value; }
         private int _CodigoDepartamentoSucursal = 0; public int CodigoDepartamentoSucursal { get => _CodigoDepartamentoSucursal; set => _CodigoDepartamentoSucursal = value; }
         private int _CodigoMunicipioSucursal = 0; public int CodigoMunicipioSucursal { get => _CodigoMunicipioSucursal; set => _CodigoMunicipioSucursal = value; }
@@ -62,6 +63,7 @@ namespace Negocio
                 if (_CodigoEmpresa == 0) { Mensaje = "Debe ingresar un valor en Codigo Empresa."; _Resultado = false; goto salir; }
                 if (_DireccionSucursal == "" || _DireccionSucursal.Length > 250) { Mensaje = "Debe ingresar un valor en Direccion Sucursal. No debe exceder los 250 carácteres."; _Resultado = false; goto salir; }
                 if (_TelefonosSucursal.Length > 64) { Mensaje = "Debe ingresar un valor en Telefonos Sucursal. No debe exceder los 64 carácteres."; _Resultado = false; goto salir; }
+                if (_EmailSucursal.Length > 150) { Mensaje = "Debe ingresar un valor en Email Sucursal. No debe exceder los 150 carácteres."; _Resultado = false; goto salir; }
                 if (_CodigoPaisSucursal == 0) { Mensaje = "Debe ingresar un valor en Codigo Pais Sucursal."; _Resultado = false; goto salir; }
                 if (_CodigoDepartamentoSucursal == 0) { Mensaje = "Debe ingresar un valor en Codigo Departamento Sucursal."; _Resultado = false; goto salir; }
                 if (_CodigoMunicipioSucursal == 0) { Mensaje = "Debe ingresar un valor en Codigo Municipio Sucursal."; _Resultado = false; goto salir; }
@@ -99,11 +101,12 @@ namespace Negocio
                             _Data.AsignarCampo("CODIGO_EMPRESA", _CodigoEmpresa);
                             _Data.AsignarCampo("DIRECCION_SUCURSAL", _DireccionSucursal);
                             _Data.AsignarCampo("TELEFONOS_SUCURSAL", _TelefonosSucursal);
+                            _Data.AsignarCampo("E_MAIL_SUCURSAL", _EmailSucursal);
                             _Data.AsignarCampo("CODIGO_PAIS_SUCURSAL", _CodigoPaisSucursal);
                             _Data.AsignarCampo("CODIGO_DEPARTAMENTO_SUCURSAL", _CodigoDepartamentoSucursal);
                             _Data.AsignarCampo("CODIGO_MUNICIPIO_SUCURSAL", _CodigoMunicipioSucursal);
                             _Data.AsignarCampo("NUM_EMPLEADOS_SUCURSAL", _NumEmpleadosSucursal);
-                            _Data.AsignarCampo("FECHA_REGISTRO", "now()");
+                            _Data.AsignarCampo("FECHA_REGISTRO", "now()", false, false, ModuloGeneral.TipoDeOperadorLogico.AndOperador, System.Data.ParameterDirection.Input, true);
                             _Data.AsignarCampo("NIT_FACTURACION", _NitFacturacion);
                             _Data.AsignarCampo("NOMBRE_FACTURACION", _NombreFacturacion);
                             _Data.AsignarCampo("TIPO_CLIENTE", _TipoCliente);
@@ -115,7 +118,7 @@ namespace Negocio
                     case ModuloGeneral.TipoDeOperacion.Eliminar:
                         if (_CodigoSucursal == 0) { Mensaje = "Debe ingresar un valor en Codigo Sucursal."; _Resultado = false; goto salir; }
                         _Data.AsignarCampo("CODIGO_SUCURSAL", _CodigoSucursal, true);
-                        _Data.AsignarCampo("FECHA_REGISTRO", "now()");
+                        _Data.AsignarCampo("FECHA_REGISTRO", "now()", false, false, ModuloGeneral.TipoDeOperadorLogico.AndOperador, System.Data.ParameterDirection.Input, true);
                         _Data.AsignarCampo("ESTADO_SUCURSAL", 0);
                         _Resultado = _Data.EjecutarOperacion(ModuloGeneral.TipoDeOperacion.Modificar, "CRM_SUCURSALES");
 

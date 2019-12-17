@@ -21,7 +21,7 @@ namespace ControlPagos.Formularios.Catalogos
         {
             try
             {
-                NombreDeFormulario = "Información de departamento";
+                NombreDeFormulario = "Información de contacto y listado de asociaciones";
                 SiglasDelSistema = Funciones.SiglasDelSistema;
                 NumeroDeFormulario = 2029;
                 ClaseDeConexion = _ClaseConexion;
@@ -50,12 +50,13 @@ namespace ControlPagos.Formularios.Catalogos
                 VincularColumna("NOMBRE_FACTURACION", txtNombreFacturacion, HorizontalAlignment.Right, Conexion.ModuloGeneral.TipoDeEdicion.AlModificar);
                 VincularColumna("FECHA_REGISTRO", dtpFechaRegistro, HorizontalAlignment.Right, Conexion.ModuloGeneral.TipoDeEdicion.Ninguna);
 
-                SelectSQLDetalle = "CCC.CODIGO_CLI_CONTACTO,CCO.CODIGO_CONTACTO, CCC.CODIGO_CLIENTE, CCC.TIPO_CLIENTE, CASE CCC.TIPO_CLIENTE WHEN 1 THEN 'CONTACTO' WHEN 2 THEN 'SUCURSAL' WHEN 3 THEN 'EMPRESA' WHEN 4 THEN 'CORPORACION' END AS NOMBRE_TIPO, CASE CCC.TIPO_CLIENTE WHEN 1 THEN CCO.NOMBRE_CONTACTO WHEN 2 THEN CSU.NOMBRE_SUCURSAL WHEN 3 THEN CEM.NOMBRE_EMPRESA WHEN 4 THEN CCR.NOMBRE_CORPORACION END AS NOMBRE_CLIENTE";
-                FromDetalle = "CRM_CONTACTOS CCO INNER JOIN crm_clientes_contacto CCC ON CCO.CODIGO_CONTACTO = CCC.CODIGO_CONTACTO INNER JOIN crm_sucursales CSU ON CCC.TIPO_CLIENTE = CSU.TIPO_CLIENTE AND CCC.CODIGO_CLIENTE = CSU.CODIGO_SUCURSAL INNER JOIN crm_empresas CEM ON CCC.TIPO_CLIENTE = CSU.TIPO_CLIENTE AND CCC.CODIGO_CLIENTE = CEM.CODIGO_EMPRESA INNER JOIN crm_corporaciones CCR ON CCC.TIPO_CLIENTE = CSU.TIPO_CLIENTE AND CCC.CODIGO_CLIENTE = CCR.CODIGO_CORPORACION";
-                GroupBy = "";
+                //QuitarLlavesDetalle = true;
+                SelectSQLDetalle = "CODIGO_CLI_CONTACTO, CODIGO_CONTACTO, CODIGO_CLIENTE, TIPO_CLIENTE, NOMBRE_TIPO, NOMBRE_CLIENTE";
+                FromDetalle = "(SELECT CCC.CODIGO_CLI_CONTACTO, CCO.CODIGO_CONTACTO, CCC.CODIGO_CLIENTE, CCC.TIPO_CLIENTE, CASE CCC.TIPO_CLIENTE WHEN 1 THEN 'CONTACTO' WHEN 2 THEN 'SUCURSAL' WHEN 3 THEN 'EMPRESA' WHEN 4 THEN 'CORPORACION' END AS NOMBRE_TIPO, CASE CCC.TIPO_CLIENTE WHEN 1 THEN CCO.NOMBRE_CONTACTO WHEN 2 THEN CSU.NOMBRE_SUCURSAL WHEN 3 THEN CEM.NOMBRE_EMPRESA WHEN 4 THEN CCR.NOMBRE_CORPORACION END AS NOMBRE_CLIENTE FROM gruposisa.crm_clientes_contacto CCC LEFT OUTER JOIN gruposisa.CRM_CONTACTOS CCO ON CCO.CODIGO_CONTACTO = CCC.CODIGO_CONTACTO LEFT OUTER JOIN gruposisa.crm_sucursales CSU ON CCC.TIPO_CLIENTE = CSU.TIPO_CLIENTE AND CCC.CODIGO_CLIENTE = CSU.CODIGO_SUCURSAL LEFT OUTER JOIN gruposisa.crm_empresas CEM ON CCC.TIPO_CLIENTE = CEM.TIPO_CLIENTE AND CCC.CODIGO_CLIENTE = CEM.CODIGO_EMPRESA LEFT OUTER JOIN gruposisa.crm_corporaciones CCR ON CCC.TIPO_CLIENTE = CSU.TIPO_CLIENTE AND CCC.CODIGO_CLIENTE = CCR.CODIGO_CORPORACION) CLIENTES";
+                //WhereDetalle = " AND CODIGO_CONTACTO = " + ObtenerLlavePrimaria("CODIGO_CONTACTO");
 
                 AgregarColumna("Código", "CODIGO_CLI_CONTACTO", 0, false, DataGridViewContentAlignment.MiddleRight, true);
-                AgregarColumna("Código", "CODIGO_CONTACTO", 0, false, DataGridViewContentAlignment.MiddleRight, false);
+                AgregarColumna("Código", "CODIGO_CONTACTO", 0, false, DataGridViewContentAlignment.MiddleRight, true);
                 AgregarColumna("Código", "CODIGO_CLIENTE", 0, false, DataGridViewContentAlignment.MiddleRight, false);
                 AgregarColumna("Código", "TIPO_CLIENTE", 0, false, DataGridViewContentAlignment.MiddleRight, false);
                 AgregarColumna("Tipo de cliente", "NOMBRE_TIPO", 30, true, DataGridViewContentAlignment.MiddleLeft, false);
@@ -75,8 +76,10 @@ namespace ControlPagos.Formularios.Catalogos
                 {
                     _ClaseConexion.Llenar_ComboBox(cmbTratamiento, dtTratamiento, "CODIGO_TRATAMIENTO", "TRATAMIENTO", "Escoja un tratamiento");
                 }
-
+                //string _CodigoGuardado = ObtenerLlavePrimaria("CODIGO_CONTACTO");
                 InicializarFormulario();
+                //AgregarLlavePrimaria("CODIGO_CONTACTO", _CodigoGuardado);
+                //AgregarLlavePrimariaDetalle("CODIGO_CONTACTO", _CodigoGuardado);
             }
             catch (Exception ex)
             {
@@ -169,7 +172,7 @@ namespace ControlPagos.Formularios.Catalogos
                 _ClaseConexion.CodigoDepartamentoContacto = (int.TryParse(cmbDepartamento.SelectedValue.ToString(), out _Numero)) ? _Numero : 0;
                 _ClaseConexion.CodigoMunicipioContacto = (int.TryParse(cmbMunicipio.SelectedValue.ToString(), out _Numero)) ? _Numero : 0;
                 _ClaseConexion.NombreFacturacion = txtNombreFacturacion.Text.Trim();
-                _ClaseConexion.EstadoCliente = 1;
+                _ClaseConexion.EstadoContacto = 1;
 
             }
             catch (Exception ex)

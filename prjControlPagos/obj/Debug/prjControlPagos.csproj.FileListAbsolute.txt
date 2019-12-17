@@ -29,6 +29,7 @@ C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\bin\Debug\Conexion.dll.con
 C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\bin\Debug\Negocio.pdb
 C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\bin\Debug\MySql.Data.xml
 C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\prjControlPagos.csprojAssemblyReference.cache
+C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\ControlPagos.Formularios.Busquedas.frmClienteBusqueda.resources
 C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\ControlPagos.Formularios.Catalogos.frmContactoAsociacionesInformacionDetalle.resources
 C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\ControlPagos.Formularios.Catalogos.frmContactoAsociacionInformacion.resources
 C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\ControlPagos.Formularios.Catalogos.frmContactoListado.resources
@@ -54,4 +55,3 @@ C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\prjControlPagos.
 C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\prjControlPagos.csproj.CopyComplete
 C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\GrupoSisa.exe
 C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\GrupoSisa.pdb
-C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\ControlPagos.Formularios.Busquedas.frmClienteBusqueda.resources

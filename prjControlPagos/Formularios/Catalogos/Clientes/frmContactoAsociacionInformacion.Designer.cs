@@ -30,10 +30,12 @@
         {
             this.txtCodigoContacto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCodigoCliente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.btnCliente = new System.Windows.Forms.Button();
+            this.txtTipoCliente = new System.Windows.Forms.TextBox();
+            this.txtCodigoClienteContacto = new System.Windows.Forms.TextBox();
             this.grpMenu.SuspendLayout();
             this.tpInformacion.SuspendLayout();
             this.tabListado.SuspendLayout();
@@ -42,21 +44,23 @@
             // 
             // grpMenu
             // 
-            this.grpMenu.Location = new System.Drawing.Point(4, 137);
+            this.grpMenu.Location = new System.Drawing.Point(4, 94);
             // 
             // tpInformacion
             // 
+            this.tpInformacion.Controls.Add(this.txtCodigoClienteContacto);
+            this.tpInformacion.Controls.Add(this.txtTipoCliente);
             this.tpInformacion.Controls.Add(this.btnCliente);
-            this.tpInformacion.Controls.Add(this.textBox2);
-            this.tpInformacion.Controls.Add(this.textBox1);
+            this.tpInformacion.Controls.Add(this.txtNombreCliente);
+            this.tpInformacion.Controls.Add(this.txtCodigoCliente);
             this.tpInformacion.Controls.Add(this.label2);
             this.tpInformacion.Controls.Add(this.txtCodigoContacto);
             this.tpInformacion.Controls.Add(this.label1);
-            this.tpInformacion.Size = new System.Drawing.Size(879, 109);
+            this.tpInformacion.Size = new System.Drawing.Size(879, 66);
             // 
             // tabListado
             // 
-            this.tabListado.Size = new System.Drawing.Size(887, 136);
+            this.tabListado.Size = new System.Drawing.Size(887, 93);
             // 
             // txtCodigoContacto
             // 
@@ -75,12 +79,12 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "Código";
             // 
-            // textBox1
+            // txtCodigoCliente
             // 
-            this.textBox1.Location = new System.Drawing.Point(76, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 23;
+            this.txtCodigoCliente.Location = new System.Drawing.Point(102, 32);
+            this.txtCodigoCliente.Name = "txtCodigoCliente";
+            this.txtCodigoCliente.Size = new System.Drawing.Size(74, 20);
+            this.txtCodigoCliente.TabIndex = 23;
             // 
             // label2
             // 
@@ -92,12 +96,12 @@
             this.label2.TabIndex = 22;
             this.label2.Text = "Cliente";
             // 
-            // textBox2
+            // txtNombreCliente
             // 
-            this.textBox2.Location = new System.Drawing.Point(204, 32);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(669, 20);
-            this.textBox2.TabIndex = 24;
+            this.txtNombreCliente.Location = new System.Drawing.Point(204, 32);
+            this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.Size = new System.Drawing.Size(669, 20);
+            this.txtNombreCliente.TabIndex = 24;
             // 
             // btnCliente
             // 
@@ -109,9 +113,24 @@
             this.btnCliente.UseVisualStyleBackColor = true;
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
+            // txtTipoCliente
+            // 
+            this.txtTipoCliente.Location = new System.Drawing.Point(76, 32);
+            this.txtTipoCliente.Name = "txtTipoCliente";
+            this.txtTipoCliente.Size = new System.Drawing.Size(27, 20);
+            this.txtTipoCliente.TabIndex = 26;
+            // 
+            // txtCodigoClienteContacto
+            // 
+            this.txtCodigoClienteContacto.Location = new System.Drawing.Point(179, 5);
+            this.txtCodigoClienteContacto.Name = "txtCodigoClienteContacto";
+            this.txtCodigoClienteContacto.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigoClienteContacto.TabIndex = 27;
+            this.txtCodigoClienteContacto.Visible = false;
+            // 
             // frmContactoAsociacionInformacion
             // 
-            this.ClientSize = new System.Drawing.Size(896, 210);
+            this.ClientSize = new System.Drawing.Size(896, 167);
             this.Name = "frmContactoAsociacionInformacion";
             this.Load += new System.EventHandler(this.frmContactoAsociacionInformacion_Load);
             this.grpMenu.ResumeLayout(false);
@@ -126,10 +145,12 @@
         #endregion
 
         private System.Windows.Forms.Button btnCliente;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNombreCliente;
+        private System.Windows.Forms.TextBox txtCodigoCliente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCodigoContacto;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtTipoCliente;
+        private System.Windows.Forms.TextBox txtCodigoClienteContacto;
     }
 }

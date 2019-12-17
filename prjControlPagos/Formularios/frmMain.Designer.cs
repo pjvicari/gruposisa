@@ -41,6 +41,10 @@
             this.mnuCatalogos = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuClientes = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuCorporaciones = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuEmpresas = new System.Windows.Forms.ToolStripMenuItem();
+            this.contactosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuContactos = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuTratamientos = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuLugares = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPais = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDepartamento = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,10 +64,6 @@
             this.tsUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsVersion = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsUnidadesOperativas = new System.Windows.Forms.ToolStripStatusLabel();
-            this.mnuEmpresas = new System.Windows.Forms.ToolStripMenuItem();
-            this.contactosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuContactos = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuTratamientos = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPrincipal.SuspendLayout();
             this.ssPie.SuspendLayout();
             this.SuspendLayout();
@@ -186,6 +186,40 @@
             this.mnuCorporaciones.Text = "Corporaciones";
             this.mnuCorporaciones.Click += new System.EventHandler(this.mnuCorporaciones_Click);
             // 
+            // mnuEmpresas
+            // 
+            this.mnuEmpresas.Image = global::ControlPagos.Properties.Resources.catalogos_32;
+            this.mnuEmpresas.Name = "mnuEmpresas";
+            this.mnuEmpresas.Size = new System.Drawing.Size(180, 22);
+            this.mnuEmpresas.Text = "Empresas";
+            this.mnuEmpresas.Click += new System.EventHandler(this.mnuEmpresas_Click);
+            // 
+            // contactosToolStripMenuItem
+            // 
+            this.contactosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuContactos,
+            this.mnuTratamientos});
+            this.contactosToolStripMenuItem.Image = global::ControlPagos.Properties.Resources.catalogos_32;
+            this.contactosToolStripMenuItem.Name = "contactosToolStripMenuItem";
+            this.contactosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.contactosToolStripMenuItem.Text = "Contactos";
+            // 
+            // mnuContactos
+            // 
+            this.mnuContactos.Image = global::ControlPagos.Properties.Resources.catalogos_32;
+            this.mnuContactos.Name = "mnuContactos";
+            this.mnuContactos.Size = new System.Drawing.Size(143, 22);
+            this.mnuContactos.Text = "Contactos";
+            this.mnuContactos.Click += new System.EventHandler(this.mnuContactos_Click);
+            // 
+            // mnuTratamientos
+            // 
+            this.mnuTratamientos.Image = global::ControlPagos.Properties.Resources.catalogos_32;
+            this.mnuTratamientos.Name = "mnuTratamientos";
+            this.mnuTratamientos.Size = new System.Drawing.Size(143, 22);
+            this.mnuTratamientos.Text = "Tratamientos";
+            this.mnuTratamientos.Click += new System.EventHandler(this.mnuTratamientos_Click);
+            // 
             // mnuLugares
             // 
             this.mnuLugares.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -202,7 +236,7 @@
             // 
             this.mnuPais.Image = global::ControlPagos.Properties.Resources.catalogos_32;
             this.mnuPais.Name = "mnuPais";
-            this.mnuPais.Size = new System.Drawing.Size(180, 22);
+            this.mnuPais.Size = new System.Drawing.Size(150, 22);
             this.mnuPais.Text = "Pais";
             this.mnuPais.Click += new System.EventHandler(this.mnuPais_Click);
             // 
@@ -210,7 +244,7 @@
             // 
             this.mnuDepartamento.Image = global::ControlPagos.Properties.Resources.catalogos_32;
             this.mnuDepartamento.Name = "mnuDepartamento";
-            this.mnuDepartamento.Size = new System.Drawing.Size(180, 22);
+            this.mnuDepartamento.Size = new System.Drawing.Size(150, 22);
             this.mnuDepartamento.Text = "Departamento";
             this.mnuDepartamento.Click += new System.EventHandler(this.mnuDepartamento_Click);
             // 
@@ -218,7 +252,7 @@
             // 
             this.municipioToolStripMenuItem.Image = global::ControlPagos.Properties.Resources.catalogos_32;
             this.municipioToolStripMenuItem.Name = "municipioToolStripMenuItem";
-            this.municipioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.municipioToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.municipioToolStripMenuItem.Text = "Municipio";
             this.municipioToolStripMenuItem.Click += new System.EventHandler(this.municipioToolStripMenuItem_Click);
             // 
@@ -370,39 +404,6 @@
             this.tsUnidadesOperativas.Spring = true;
             this.tsUnidadesOperativas.Text = "Unidades de operación";
             this.tsUnidadesOperativas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // mnuEmpresas
-            // 
-            this.mnuEmpresas.Image = global::ControlPagos.Properties.Resources.catalogos_32;
-            this.mnuEmpresas.Name = "mnuEmpresas";
-            this.mnuEmpresas.Size = new System.Drawing.Size(180, 22);
-            this.mnuEmpresas.Text = "Empresas";
-            // 
-            // contactosToolStripMenuItem
-            // 
-            this.contactosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuContactos,
-            this.mnuTratamientos});
-            this.contactosToolStripMenuItem.Image = global::ControlPagos.Properties.Resources.catalogos_32;
-            this.contactosToolStripMenuItem.Name = "contactosToolStripMenuItem";
-            this.contactosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.contactosToolStripMenuItem.Text = "Contactos";
-            // 
-            // mnuContactos
-            // 
-            this.mnuContactos.Image = global::ControlPagos.Properties.Resources.catalogos_32;
-            this.mnuContactos.Name = "mnuContactos";
-            this.mnuContactos.Size = new System.Drawing.Size(180, 22);
-            this.mnuContactos.Text = "Contactos";
-            this.mnuContactos.Click += new System.EventHandler(this.mnuContactos_Click);
-            // 
-            // mnuTratamientos
-            // 
-            this.mnuTratamientos.Image = global::ControlPagos.Properties.Resources.catalogos_32;
-            this.mnuTratamientos.Name = "mnuTratamientos";
-            this.mnuTratamientos.Size = new System.Drawing.Size(180, 22);
-            this.mnuTratamientos.Text = "Tratamientos";
-            this.mnuTratamientos.Click += new System.EventHandler(this.mnuTratamientos_Click);
             // 
             // frmMain
             // 

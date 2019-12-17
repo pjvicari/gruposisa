@@ -54,3 +54,4 @@ C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\prjControlPagos.
 C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\prjControlPagos.csproj.CopyComplete
 C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\GrupoSisa.exe
 C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\GrupoSisa.pdb
+C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\ControlPagos.Formularios.Busquedas.frmClienteBusqueda.resources

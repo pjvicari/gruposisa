@@ -32,10 +32,9 @@ namespace ControlPagos.Formularios.Busquedas
                 Where = "";
                 OrderBy = "CODIGO_TRATAMIENTO";
 
-                AgregarColumna("Código", "CODIGO_TRATAMIENTO", 10, true, DataGridViewContentAlignment.MiddleRight, true);
-                AgregarColumna("Siglas", "SIGLAS_TRATAMIENTO", 15, true, DataGridViewContentAlignment.MiddleLeft, false);
-                AgregarColumna("Tratamiento", "TRATAMIENTO", 65, true, DataGridViewContentAlignment.MiddleLeft, false);
-                AgregarColumna("Estado", "ESTADO", 10, true, DataGridViewContentAlignment.MiddleLeft, false);
+                AgregarColumna("Código", "CODIGO_CONTACTO", 15, false, DataGridViewContentAlignment.MiddleLeft, "");
+                AgregarColumna("Nombres y Apellidos", "NOMBRE_CONTACTO", 50, true, DataGridViewContentAlignment.MiddleLeft, "");
+                AgregarColumna("Cargo", "CARGO_CONTACTO", 35, true, DataGridViewContentAlignment.MiddleLeft, "");
 
 
                 InicializarFormulario();

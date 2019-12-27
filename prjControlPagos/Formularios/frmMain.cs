@@ -12,7 +12,7 @@ namespace ControlPagos
     public partial class frmMain : Form
     {
         private string _Mensaje  = "";        
-        //Intecap.Negocio.Seguridad _Seguridad = new Intecap.Negocio.Seguridad(Funciones.AñoDeOperacion, Funciones.Ambiente);
+        //Negocio.Seguridad _Seguridad = new Negocio.Seguridad(Funciones.AñoDeOperacion, Funciones.Ambiente);
 
         public frmMain()
         {
@@ -83,6 +83,20 @@ namespace ControlPagos
             Formularios.Catalogos.frmEmpresaListado _Empresa = new Formularios.Catalogos.frmEmpresaListado();
             _Empresa.MdiParent = this;
             _Empresa.Show();
+        }
+
+        private void mnuUnidadesMedida_Click(object sender, EventArgs e)
+        {
+            Formularios.Catalogos.Productos.frmUnidadMedidaListado _Unidades = new Formularios.Catalogos.Productos.frmUnidadMedidaListado();
+            _Unidades.MdiParent = this;
+            _Unidades.Show();
+        }
+
+        private void mnuProductosDetalle_Click(object sender, EventArgs e)
+        {
+            Formularios.Catalogos.Productos.frmProductosListado _Productos = new Formularios.Catalogos.Productos.frmProductosListado();
+            _Productos.MdiParent = this;
+            _Productos.Show();
         }
     }
 }

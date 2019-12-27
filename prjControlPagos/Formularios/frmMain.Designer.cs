@@ -64,6 +64,10 @@
             this.tsUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsVersion = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsUnidadesOperativas = new System.Windows.Forms.ToolStripStatusLabel();
+            this.mnuProductos = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProductosDetalle = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuCombinaciones = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuUnidadesMedida = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPrincipal.SuspendLayout();
             this.ssPie.SuspendLayout();
             this.SuspendLayout();
@@ -158,7 +162,8 @@
             // 
             this.mnuCatalogos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuClientes,
-            this.mnuLugares});
+            this.mnuLugares,
+            this.mnuProductos});
             this.mnuCatalogos.Image = ((System.Drawing.Image)(resources.GetObject("mnuCatalogos.Image")));
             this.mnuCatalogos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnuCatalogos.Name = "mnuCatalogos";
@@ -236,7 +241,7 @@
             // 
             this.mnuPais.Image = global::ControlPagos.Properties.Resources.catalogos_32;
             this.mnuPais.Name = "mnuPais";
-            this.mnuPais.Size = new System.Drawing.Size(150, 22);
+            this.mnuPais.Size = new System.Drawing.Size(180, 22);
             this.mnuPais.Text = "Pais";
             this.mnuPais.Click += new System.EventHandler(this.mnuPais_Click);
             // 
@@ -244,7 +249,7 @@
             // 
             this.mnuDepartamento.Image = global::ControlPagos.Properties.Resources.catalogos_32;
             this.mnuDepartamento.Name = "mnuDepartamento";
-            this.mnuDepartamento.Size = new System.Drawing.Size(150, 22);
+            this.mnuDepartamento.Size = new System.Drawing.Size(180, 22);
             this.mnuDepartamento.Text = "Departamento";
             this.mnuDepartamento.Click += new System.EventHandler(this.mnuDepartamento_Click);
             // 
@@ -252,7 +257,7 @@
             // 
             this.municipioToolStripMenuItem.Image = global::ControlPagos.Properties.Resources.catalogos_32;
             this.municipioToolStripMenuItem.Name = "municipioToolStripMenuItem";
-            this.municipioToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.municipioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.municipioToolStripMenuItem.Text = "Municipio";
             this.municipioToolStripMenuItem.Click += new System.EventHandler(this.municipioToolStripMenuItem_Click);
             // 
@@ -405,6 +410,41 @@
             this.tsUnidadesOperativas.Text = "Unidades de operación";
             this.tsUnidadesOperativas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // mnuProductos
+            // 
+            this.mnuProductos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuProductosDetalle,
+            this.mnuCombinaciones,
+            this.mnuUnidadesMedida});
+            this.mnuProductos.Image = ((System.Drawing.Image)(resources.GetObject("mnuProductos.Image")));
+            this.mnuProductos.Name = "mnuProductos";
+            this.mnuProductos.Size = new System.Drawing.Size(180, 22);
+            this.mnuProductos.Tag = "";
+            this.mnuProductos.Text = "Productos";
+            // 
+            // mnuProductosDetalle
+            // 
+            this.mnuProductosDetalle.Image = global::ControlPagos.Properties.Resources.catalogos_32;
+            this.mnuProductosDetalle.Name = "mnuProductosDetalle";
+            this.mnuProductosDetalle.Size = new System.Drawing.Size(182, 22);
+            this.mnuProductosDetalle.Text = "Productos";
+            this.mnuProductosDetalle.Click += new System.EventHandler(this.mnuProductosDetalle_Click);
+            // 
+            // mnuCombinaciones
+            // 
+            this.mnuCombinaciones.Image = global::ControlPagos.Properties.Resources.catalogos_32;
+            this.mnuCombinaciones.Name = "mnuCombinaciones";
+            this.mnuCombinaciones.Size = new System.Drawing.Size(182, 22);
+            this.mnuCombinaciones.Text = "Combos";
+            // 
+            // mnuUnidadesMedida
+            // 
+            this.mnuUnidadesMedida.Image = global::ControlPagos.Properties.Resources.catalogos_32;
+            this.mnuUnidadesMedida.Name = "mnuUnidadesMedida";
+            this.mnuUnidadesMedida.Size = new System.Drawing.Size(182, 22);
+            this.mnuUnidadesMedida.Text = "Unidades de medida";
+            this.mnuUnidadesMedida.Click += new System.EventHandler(this.mnuUnidadesMedida_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -464,6 +504,10 @@
         private System.Windows.Forms.ToolStripMenuItem contactosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mnuContactos;
         private System.Windows.Forms.ToolStripMenuItem mnuTratamientos;
+        internal System.Windows.Forms.ToolStripMenuItem mnuProductos;
+        private System.Windows.Forms.ToolStripMenuItem mnuProductosDetalle;
+        private System.Windows.Forms.ToolStripMenuItem mnuCombinaciones;
+        private System.Windows.Forms.ToolStripMenuItem mnuUnidadesMedida;
     }
 }
 

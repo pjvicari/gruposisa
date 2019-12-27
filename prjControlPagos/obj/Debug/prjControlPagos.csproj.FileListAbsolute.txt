@@ -55,3 +55,10 @@ C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\prjControlPagos.
 C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\prjControlPagos.csproj.CopyComplete
 C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\GrupoSisa.exe
 C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\GrupoSisa.pdb
+C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\ControlPagos.Formularios.Catalogos.Productos.frmCombosListado.resources
+C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\ControlPagos.Formularios.Catalogos.Productos.frmCombosProductosInformacion.resources
+C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\ControlPagos.Formularios.Catalogos.Productos.frmCombosProductosInformacionDetalle.resources
+C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\ControlPagos.Formularios.Catalogos.Productos.frmProductosInformacion.resources
+C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\ControlPagos.Formularios.Catalogos.Productos.frmProductosListado.resources
+C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\ControlPagos.Formularios.Catalogos.Productos.frmUnidadMedidaInformacion.resources
+C:\Users\pjvic\source\repos\GrupoSisa\prjControlPagos\obj\Debug\ControlPagos.Formularios.Catalogos.Productos.frmUnidadMedidaListado.resources

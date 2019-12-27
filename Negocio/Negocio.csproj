@@ -41,15 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contacto.cs" />
-    <Compile Include="Corporacion.cs" />
-    <Compile Include="Departamento.cs" />
-    <Compile Include="Empresa.cs" />
-    <Compile Include="Municipio.cs" />
-    <Compile Include="Pais.cs" />
+    <Compile Include="Clientes\Contacto.cs" />
+    <Compile Include="Clientes\Corporacion.cs" />
+    <Compile Include="Productos\CombinacionProductos.cs" />
+    <Compile Include="Lugares\Departamento.cs" />
+    <Compile Include="Clientes\Empresa.cs" />
+    <Compile Include="Lugares\Municipio.cs" />
+    <Compile Include="Lugares\Pais.cs" />
+    <Compile Include="Productos\Combinaciones.cs" />
+    <Compile Include="Productos\Productos.cs" />
+    <Compile Include="Productos\UnidadesMedida.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sucursal.cs" />
-    <Compile Include="Tratamiento.cs" />
+    <Compile Include="Clientes\Sucursal.cs" />
+    <Compile Include="Clientes\Tratamiento.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Conexion\Conexion.vbproj">
@@ -57,5 +61,6 @@
       <Name>Conexion</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

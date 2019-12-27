@@ -167,6 +167,48 @@
     <Compile Include="Formularios\Catalogos\Lugares\frmPaisListado.Designer.cs">
       <DependentUpon>frmPaisListado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Catalogos\Productos\frmCombosListado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Productos\frmCombosListado.Designer.cs">
+      <DependentUpon>frmCombosListado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Productos\frmCombosProductosInformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Productos\frmCombosProductosInformacion.Designer.cs">
+      <DependentUpon>frmCombosProductosInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Productos\frmCombosProductosInformacionDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Productos\frmCombosProductosInformacionDetalle.Designer.cs">
+      <DependentUpon>frmCombosProductosInformacionDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Productos\frmProductosInformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Productos\frmProductosInformacion.Designer.cs">
+      <DependentUpon>frmProductosInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Productos\frmProductosListado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Productos\frmProductosListado.Designer.cs">
+      <DependentUpon>frmProductosListado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Productos\frmUnidadMedidaInformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Productos\frmUnidadMedidaInformacion.Designer.cs">
+      <DependentUpon>frmUnidadMedidaInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Productos\frmUnidadMedidaListado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\Productos\frmUnidadMedidaListado.Designer.cs">
+      <DependentUpon>frmUnidadMedidaListado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +274,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Catalogos\Lugares\frmPaisListado.resx">
       <DependentUpon>frmPaisListado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Productos\frmCombosListado.resx">
+      <DependentUpon>frmCombosListado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Productos\frmCombosProductosInformacion.resx">
+      <DependentUpon>frmCombosProductosInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Productos\frmCombosProductosInformacionDetalle.resx">
+      <DependentUpon>frmCombosProductosInformacionDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Productos\frmProductosInformacion.resx">
+      <DependentUpon>frmProductosInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Productos\frmProductosListado.resx">
+      <DependentUpon>frmProductosListado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Productos\frmUnidadMedidaInformacion.resx">
+      <DependentUpon>frmUnidadMedidaInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\Productos\frmUnidadMedidaListado.resx">
+      <DependentUpon>frmUnidadMedidaListado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
